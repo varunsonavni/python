@@ -14,3 +14,5 @@ list1 = ["varun", "randy", "roman"]
 
 print(random.choice(list1))
 print(my_module.value)
+
+print(random.random()) # print random float number between 0 and 1
