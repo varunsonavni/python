@@ -1,4 +1,5 @@
 import random
+import my_module
 
 # random.seed(2) # random.seed() function will always return same random value to our program.
 outcome = random.randint(0,1)
@@ -12,3 +13,4 @@ elif outcome == 0:
 list1 = ["varun", "randy", "roman"]
 
 print(random.choice(list1))
+print(my_module.value)
