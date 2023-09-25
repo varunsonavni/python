@@ -7,8 +7,9 @@ for n in range(0, len(student_scores)):
 
 #Write your code below this row 👇
 
-# for i in range(0,len(student_scores)):
-#   for j in range(1,len(student_scores)):
-#     if i > j:
+max = 0
+for i in range(0,len(student_scores)-1):
+  if student_scores[i] > student_scores[i+1]:
+    max = student_scores[i]
 
-print(max(student_scores))
+print(f"The highest score in the class is: {max}",end="")
