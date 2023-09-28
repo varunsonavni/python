@@ -92,12 +92,14 @@ while chance > 0:
     guess = input("\nGuess a letter: ").lower()
     os.system("clear")
 
+    if guess in ans:
+        print(f"You already guessed {guess}!")
+
     for letter in range(len(chosen_word)):
-        
+
         if chosen_word[letter] == guess:
             ans[letter] = guess
             flag = True
-
     print(ans)
     print(stages[chance])    
 
