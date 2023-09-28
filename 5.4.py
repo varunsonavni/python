@@ -18,8 +18,17 @@ num = random.choices(numbers, k=nr_numbers)
 print(let, num, sym)
 password = let + sym + num
 print(password)
+print("")
 
 result_string = ''.join(password)
-print(result_string)
+print(f"Eassy password iss : {result_string} \n")
+
+random.shuffle(password) # shuffle the list containing the password
+print(password)
+random_string2 = ''.join(password)
+print(f"\n Hard password 1 iss : {random_string2} \n")
 
 
+
+random_string = ''.join(random.sample(result_string,len(result_string)))
+print(f"Hard password 2 iss : {random_string}")
