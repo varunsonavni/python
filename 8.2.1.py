@@ -29,7 +29,9 @@ def caesar(direction, text, shift):
 
 while True:
     direction = input("Type 'encode' to encrypt, type 'decode' to decrypt or type 'exit' for exit:\n")
+    if direction == "exit":
+        print("Exiting...")
+        exit(1)
     text = input("Type your message:\n").lower()
     shift = int(input("Type the shift number:\n"))
-
     caesar(direction, text, shift)    
