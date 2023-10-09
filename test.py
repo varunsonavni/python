@@ -12,14 +12,9 @@ student_grades = {}
 print(student_scores.keys())
 print(student_scores.get(1))
 
-print(student_scores.)
 
-for student_grade in range(len(student_scores)):
-    if student_grade >= 91 and student_grade <= 100:
-        # student_grades[] = student_grade
-        pass
+value = 9.3214567410
 
-         
-    print(student_grade)
-
+print(value)
+print(f"{value:.2f}")
     
