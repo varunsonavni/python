@@ -17,11 +17,9 @@ def choose_difficulty():
 def check_answer(guess, answer, total_chances):  # 40, 20
     if guess > answer:
         print("Too high.")
-        print("Guess again.")
         return False
     elif guess < answer:
         print("Too low.")
-        print("Guess again.")
         return False
     else: 
          print(f"You got it! The answer was {answer}.")
@@ -43,6 +41,12 @@ def play_game():
         win = check_answer(guess, answer, total_chances)
         if win == True:
             return
+
+        if total_chances == 0:
+            print("You've run out of guesses, you lose.")
+            return
+        
+        print("Guess again.")
         print(f"You have {total_chances} attempts remaining to guess the number.")
 
 
