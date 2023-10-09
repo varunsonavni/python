@@ -17,15 +17,12 @@ logo = """
 """
 
 def show_operations():
-    print("+")
-    print("-")
-    print("*")
-    print("/")
-
+    operation = ["+", "-", "*", "/"]
+    for symbol in operation:
+        print(symbol)
 
 is_continue  = True
 final_ans_continue_bool = True
-
 
 def calculate_ans(input_num_1, input_num_2, current_operation):
     """Calulate the answer of two numbers based on the current operation"""
@@ -82,8 +79,6 @@ while is_continue:
                 final_ans_continue_bool = False
                 break
             final_ans_continue = input(f"Type 'y' to continue calculation with {new_final_ans}, or type 'n' to start a new calculation: ")
-
-
     else:
         os.system("clear")
 
