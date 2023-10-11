@@ -31,7 +31,6 @@ while game_is_continue:
     # print(data[0])
     random_index_1 = get_random_number(data)
     chosen_data_1 = data[random_index_1]
-    print(chosen_data_1)
 
     random_index_2 = get_random_number(data)
     chosen_data_2 = data[random_index_2]
