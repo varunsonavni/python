@@ -56,3 +56,4 @@ while game_is_continue:
         print(f"Sorry, that's wrong. Final score: {score}")
         game_is_continue = False
 
+ 
