@@ -6,21 +6,24 @@ screen = t.Screen()
 
 colours = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSeaGreen", "wheat", "SlateGray", "SeaGreen"]
 
-t.title("Dashed Line...")
+t.title("Random Walk...")
 t.bgcolor("white")
 
-timmy.shape("turtle")
+timmy.shape("circle")
 timmy.color("red")
+timmy.pensize("15")
 
-def draw_shape(angle, side):
-    for _ in range(side):
-        timmy.forward(100)
-        timmy.right(angle/side)
+actions = [0, 90, 180, 270]
 
-angle = 360
+timmy.speed(10)
 
-for side in range(3,10):
+def draw_shape():
+    timmy.forward(30)
+    timmy.right(random.choice(actions))
+    # timmy.setheading(random.choice(actions))
+
+for side in range(300):
     timmy.pencolor(random.choice(colours))
-    draw_shape(angle, side)
+    draw_shape()
 
 screen.exitonclick()
