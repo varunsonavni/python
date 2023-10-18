@@ -9,6 +9,7 @@ colours = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSea
 t.title("Random Walk...")
 t.bgcolor("white")
 
+
 timmy.shape("circle")
 timmy.color("red")
 timmy.pensize("15")
@@ -19,11 +20,14 @@ timmy.speed(10)
 
 def draw_shape():
     timmy.forward(30)
-    timmy.right(random.choice(actions))
-    # timmy.setheading(random.choice(actions))
+    # timmy.right(random.choice(actions))
+    timmy.setheading(random.choice(actions))
 
 for side in range(300):
-    timmy.pencolor(random.choice(colours))
+    custom_color = (random.randint(0,255), random.randint(0,255), random.randint(0,255))
+    print(custom_color)
+    hex_color = "#{:02X}{:02X}{:02X}".format(*custom_color)
+    timmy.pencolor(hex_color)
     draw_shape()
 
 screen.exitonclick()
