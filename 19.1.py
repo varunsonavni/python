@@ -24,6 +24,7 @@ def clear():
     timmy.clear()
     timmy.penup()
     timmy.home()
+    timmy.pendown()
 
 screen.listen()  
 screen.onkeypress(key="w", fun=move_forward)
